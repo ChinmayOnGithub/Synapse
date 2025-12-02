@@ -126,8 +126,8 @@ export const Profile = () => {
         setNewPassword: '',
         setConfirmPassword: '',
       });
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to set password');
+    } catch {
+      toast.error('Failed to set password');
     } finally {
       setLoading(false);
     }

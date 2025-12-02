@@ -18,7 +18,7 @@ export const checkBanned = async (req: AuthRequest, res: Response, next: NextFun
     }
 
     next();
-  } catch (error) {
+  } catch {
     next();
   }
 };

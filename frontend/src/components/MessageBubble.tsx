@@ -12,6 +12,8 @@ interface Props {
 }
 
 export const MessageBubble = ({ message, showAvatar = true, showUsername = true }: Props) => {
+  const [copied, setCopied] = useState(false);
+
   // System message (user joined/left)
   if (message.type === 'system') {
     return (
@@ -24,7 +26,6 @@ export const MessageBubble = ({ message, showAvatar = true, showUsername = true 
   }
 
   if (message.type === 'code') {
-    const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
       try {

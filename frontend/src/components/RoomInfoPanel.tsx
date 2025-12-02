@@ -126,7 +126,7 @@ export const RoomInfoPanel = ({ roomId, messages, onClose, onOpenSettings, initi
         },
       });
       setQrCode(qr);
-    } catch (error: any) {
+    } catch {
       toast.error('Failed to load room details');
     } finally {
       setLoading(false);

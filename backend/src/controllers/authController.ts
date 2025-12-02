@@ -235,7 +235,7 @@ export const logout = async (req: Request, res: Response): Promise<void> => {
     }
 
     res.status(200).json({ message: 'Logged out successfully' });
-  } catch (error: any) {
+  } catch {
     res.status(200).json({ message: 'Logged out successfully' });
   }
 };

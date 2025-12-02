@@ -24,7 +24,7 @@ export const requireAdmin = async (req: AuthRequest, res: Response, next: NextFu
     }
 
     next();
-  } catch (error) {
+  } catch {
     res.status(500).json({ error: 'Authorization check failed' });
   }
 };
