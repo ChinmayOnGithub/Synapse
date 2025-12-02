@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* Custom Scrollbar - Terminal Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+::-webkit-scrollbar-corner {
+  background: #0d1117;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #0d1117;
+}
+
+/* Sonner Toast Styling */
+[data-sonner-toast] {
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  color: white !important;
+}
+
+[data-sonner-toast][data-type="success"] {
+  border-color: #238636 !important;
+}
+
+[data-sonner-toast][data-type="error"] {
+  border-color: #da3633 !important;
+}
+
+[data-sonner-toast][data-type="info"] {
+  border-color: #58a6ff !important;
+}
+
+[data-sonner-toast] [data-title] {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+[data-sonner-toast] [data-description] {
+  color: #8b949e !important;
+}
+
+[data-sonner-toast] [data-icon] {
+  color: inherit !important;
+}
+
+[data-sonner-toast] [data-button] {
+  background-color: #21262d !important;
+  color: white !important;
+  border: 1px solid #30363d !important;
+}
+
+[data-sonner-toast] [data-button]:hover {
+  background-color: #30363d !important;
+}
