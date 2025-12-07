@@ -7,7 +7,7 @@ spec:
   project: default
   
   source:
-    repoURL: https://github.com/yourusername/synapse-chat.git
+    repoURL: https://github.com/ChinmayOnGithub/Synapse.git
     targetRevision: main
     path: k8s
   
