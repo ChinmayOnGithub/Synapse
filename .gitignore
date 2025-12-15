@@ -62,3 +62,6 @@ Thumbs.db
 # Misc
 .vercel
 .turbo
+
+# secrets
+# k8s/secrets.yaml
