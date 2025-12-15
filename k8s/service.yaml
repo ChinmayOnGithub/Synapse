@@ -3,56 +3,38 @@ kind: Service
 metadata:
   name: synapse-backend
   namespace: synapse
-  labels:
-    app: synapse
-    component: backend
 spec:
   type: NodePort
   selector:
-    app: synapse
-    component: backend
+    app: synapse-backend
   ports:
   - port: 8000
     targetPort: 8000
     nodePort: 30800
-    protocol: TCP
-    name: http
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: synapse-frontend
   namespace: synapse
-  labels:
-    app: synapse
-    component: frontend
 spec:
   type: NodePort
   selector:
-    app: synapse
-    component: frontend
+    app: synapse-frontend
   ports:
   - port: 80
     targetPort: 80
     nodePort: 30080
-    protocol: TCP
-    name: http
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: mongodb
   namespace: synapse
-  labels:
-    app: synapse
-    component: database
 spec:
   type: ClusterIP
   selector:
-    app: synapse
-    component: database
+    app: mongodb
   ports:
   - port: 27017
     targetPort: 27017
-    protocol: TCP
-    name: mongodb

@@ -1,4 +1,0 @@
-docker
-docker compse
-
-minikube start --driver=docker
